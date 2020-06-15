@@ -11,11 +11,12 @@ so you can open this project with any Gradle-compatible Java IDE to build and ru
 
 ## Useful commands
 
- * `./gradlew build` - compile and run tests
- * `cdk ls`          - list all stacks in the app
- * `cdk synth`       - emits the synthesized CloudFormation template
- * `cdk deploy`      - deploy this stack to your default AWS account/region
- * `cdk diff`        - compare deployed stack with current state
- * `cdk docs`        - open CDK documentation
+* `npm install`     - install the CDK CLI package locally
+* `./gradlew build` - compile and run tests
+* `npx cdk ls`      - list all stacks in the app
+* `npx cdk synth`   - show the synthesized CloudFormation template
+* `npx cdk deploy`  - deploy this stack to your default AWS account/region
+* `npx cdk diff`    - compare deployed stack with current state
+* `npx cdk docs`    - open CDK documentation
 
 Enjoy!
