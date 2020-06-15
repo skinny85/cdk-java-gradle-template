@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+}
+
+group 'com.myorg'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = '1.8'
+
+application {
+    mainClass = 'com.myorg.Main'
+}
+
+ext {
+    cdk_version = '1.45.0'
+}
+
+dependencies {
+    implementation "software.amazon.awscdk:sns:$cdk_version"
+    implementation "software.amazon.awscdk:sns-subscriptions:$cdk_version"
+    implementation "software.amazon.awscdk:sqs:$cdk_version"
+
+    testImplementation 'junit:junit:4.12'
+}

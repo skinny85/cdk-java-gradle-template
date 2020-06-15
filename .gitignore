@@ -11,3 +11,6 @@ target
 .cdk.staging
 cdk.out
 
+# Gradle files
+.gradle
+build

@@ -8,20 +8,20 @@ import software.amazon.awscdk.services.sns.Topic;
 import software.amazon.awscdk.services.sns.subscriptions.SqsSubscription;
 import software.amazon.awscdk.services.sqs.Queue;
 
-public class CdkJavaGradleTemplateStack extends Stack {
-    public CdkJavaGradleTemplateStack(final Construct parent, final String id) {
+public final class CdkJavaGradleStack extends Stack {
+    public CdkJavaGradleStack(Construct parent, String id) {
         this(parent, id, null);
     }
 
-    public CdkJavaGradleTemplateStack(final Construct parent, final String id, final StackProps props) {
+    public CdkJavaGradleStack(Construct parent, String id, StackProps props) {
         super(parent, id, props);
 
-        final Queue queue = Queue.Builder.create(this, "CdkJavaGradleTemplateQueue")
+        Queue queue = Queue.Builder.create(this, "Queue")
                 .visibilityTimeout(Duration.seconds(300))
                 .build();
 
-        final Topic topic = Topic.Builder.create(this, "CdkJavaGradleTemplateTopic")
-            .displayName("My First Topic Yeah")
+        Topic topic = Topic.Builder.create(this, "Topic")
+            .displayName("My first topic, yeah!")
             .build();
 
         topic.addSubscription(new SqsSubscription(queue));
